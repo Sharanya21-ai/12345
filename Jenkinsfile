@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
+                sh 'docker build -t sharanya21ai/my-python-app3:latest .'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Push Image') {
             steps {
-                sh 'docker push $DOCKER_IMAGE:$DOCKER_TAG'
+                sh 'docker push sharanya21ai/my-python-app3:latest'
             }
         }
 
